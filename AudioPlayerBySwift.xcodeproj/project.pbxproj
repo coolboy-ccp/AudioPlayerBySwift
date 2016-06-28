@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005FFD1C1D22715200AEC7C2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005FFD1B1D22715200AEC7C2 /* AVFoundation.framework */; };
+		005FFD1E1D22719300AEC7C2 /* 年轮.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 005FFD1D1D22719300AEC7C2 /* 年轮.mp3 */; };
+		005FFD201D2279A900AEC7C2 /* 月亮可以代表我的心.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 005FFD1F1D2279A900AEC7C2 /* 月亮可以代表我的心.mp3 */; };
 		00F999C61D2269910042C058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F999C51D2269910042C058 /* AppDelegate.swift */; };
 		00F999C81D2269910042C058 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F999C71D2269910042C058 /* ViewController.swift */; };
 		00F999CB1D2269910042C058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F999C91D2269910042C058 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		005FFD1B1D22715200AEC7C2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		005FFD1D1D22719300AEC7C2 /* 年轮.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "年轮.mp3"; sourceTree = "<group>"; };
+		005FFD1F1D2279A900AEC7C2 /* 月亮可以代表我的心.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "月亮可以代表我的心.mp3"; sourceTree = "<group>"; };
 		00F999C21D2269910042C058 /* AudioPlayerBySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayerBySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F999C51D2269910042C058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00F999C71D2269910042C058 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005FFD1C1D22715200AEC7C2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +45,7 @@
 		00F999B91D2269910042C058 = {
 			isa = PBXGroup;
 			children = (
+				005FFD1B1D22715200AEC7C2 /* AVFoundation.framework */,
 				00F999C41D2269910042C058 /* AudioPlayerBySwift */,
 				00F999C31D2269910042C058 /* Products */,
 			);
@@ -60,6 +68,8 @@
 				00F999CC1D2269910042C058 /* Assets.xcassets */,
 				00F999CE1D2269910042C058 /* LaunchScreen.storyboard */,
 				00F999D11D2269910042C058 /* Info.plist */,
+				005FFD1D1D22719300AEC7C2 /* 年轮.mp3 */,
+				005FFD1F1D2279A900AEC7C2 /* 月亮可以代表我的心.mp3 */,
 			);
 			path = AudioPlayerBySwift;
 			sourceTree = "<group>";
@@ -124,6 +134,8 @@
 			files = (
 				00F999D01D2269910042C058 /* LaunchScreen.storyboard in Resources */,
 				00F999CD1D2269910042C058 /* Assets.xcassets in Resources */,
+				005FFD1E1D22719300AEC7C2 /* 年轮.mp3 in Resources */,
+				005FFD201D2279A900AEC7C2 /* 月亮可以代表我的心.mp3 in Resources */,
 				00F999CB1D2269910042C058 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +298,7 @@
 				00F999D61D2269910042C058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,19 +7,45 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
+import AVFoundation
+class ViewController: UIViewController,AVAudioPlayerDelegate {
+    
+    var audioPlayer: AVAudioPlayer?
+    var musicName: String? {
+        didSet {
+            let filePath = NSBundle.mainBundle().pathForResource(musicName, ofType: nil)
+            let fileUrl = NSURL(fileURLWithPath: filePath!)
+            do {
+                audioPlayer = try
+                AVAudioPlayer(contentsOfURL:fileUrl)
+                audioPlayer?.numberOfLoops = 0
+                audioPlayer?.delegate = self
+                audioPlayer?.prepareToPlay()
+            }
+            catch let error as NSError {
+                print("Could not create audioPlayer:\(error)")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func PlayMusics(sender: UIButton) {
+        audioPlayer = nil
+        if sender.tag == 101 {
+            musicName = "年轮.mp3"
+        }
+        else if sender.tag == 102 {
+            musicName = "月亮可以代表我的心.mp3"
+        }
+        audioPlayer?.play()
     }
-
-
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        print("finished")
+    }
 }
 
