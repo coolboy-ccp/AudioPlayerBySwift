@@ -13,18 +13,21 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer?
     var musicName: String? {
         didSet {
-            let filePath = NSBundle.mainBundle().pathForResource(musicName, ofType: nil)
-            let fileUrl = NSURL(fileURLWithPath: filePath!)
-            do {
-                audioPlayer = try
-                AVAudioPlayer(contentsOfURL:fileUrl)
-                audioPlayer?.numberOfLoops = 0
-                audioPlayer?.delegate = self
-                audioPlayer?.prepareToPlay()
+            let filePath: String? = NSBundle.mainBundle().pathForResource(musicName, ofType: nil)
+            if filePath != nil {
+               let fileUrl = NSURL(fileURLWithPath: filePath!)
+                do {
+                    audioPlayer = try
+                    AVAudioPlayer(contentsOfURL:fileUrl)
+                    audioPlayer?.numberOfLoops = 0
+                    audioPlayer?.delegate = self
+                    audioPlayer?.prepareToPlay()
+                }
+                catch let error as NSError {
+                    print("Could not create audioPlayer:\(error)")
+                }
             }
-            catch let error as NSError {
-                print("Could not create audioPlayer:\(error)")
-            }
+       
         }
     }
     
